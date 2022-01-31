@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Masyu puzzle</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="puzzle">
+        <div class="puzzle-controls">
+            <m-tabs id="controls">
+                <m-tab slot="tab">Generate puzzle</m-tab>
+                <m-panel slot="panel" id="panelGenPuzzle">
+                    <m-linked-ranges id="lrGenPuzzle" step="2" min="16" max="64">
+                        <span slot="label1">Rows:</span>
+                        <span slot="label2">Cols:</span>
+                    </m-linked-ranges>
+                    <input id="btnNewPuzzle" type="button" value="New puzzle" />
+                </m-panel>
+
+                <m-tab slot="tab">Create puzzle</m-tab>
+                <m-panel slot="panel" id="panelCreatePuzzle">
+                    <m-linked-ranges id="lrCreatePuzzle" step="2" min="16" max="100">
+                        <span slot="label1">Rows:</span>
+                        <span slot="label2">Cols:</span>
+                    </m-linked-ranges>
+                    <input id="btnScatterPearls" type="button" value="Scatter pearls" />
+                </m-panel>
+
+                <m-tab slot="tab">Load puzzle</m-tab>
+                <m-panel slot="panel" id="panelLoadPuzzle">
+                    <input id="flLoadPuzzle" type="file" accept=".masyu" style="display: none"/>
+                    <input id="btnLoadPuzzle" type="button" value="Load puzzle" />
+                </m-panel>
+            </m-tabs>
+
+            <div class="common-controls">
+                <m-switch id="editMode">Edit mode</m-switch>
+                <input id="btnSolve" type="button" value="Solve" />
+                <input id="btnReset" type="button" value="Reset" />
+                <input id="btnSaveBoard" type="button" value="Save..." />
+            </div>
+
+        </div>
+
+        <div class="puzzle-board"></div>
+    </div>
+    <m-overlay id="overlay" abort="10000">
+        <m-spinner></m-spinner>
+    </m-overlay>
+</body>
+
+<!--tsc + npm-->
+<script src="components/index.js" type="module"></script>
+<script src="src/workers/graph-worker.js"></script>
+<script src="src/app.js" type="module"></script>
+
+</html>

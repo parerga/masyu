@@ -1,0 +1,116 @@
+@import 'palette.css';
+
+:root {
+    --padding-controls: 20px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+
+    color: var(--primary-foreground-color);
+    background-color: var(--primary-background-color);
+}
+
+.puzzle {
+    display: flex;
+}
+
+.puzzle-controls {
+    flex: 1 400px;
+    padding: 25px;
+}
+
+.puzzle-board {
+    flex: 5;
+    position: relative;
+}
+
+.puzzle-board > canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.common-controls {
+    padding: var(--padding-controls);
+    padding-top: 0;
+    border-left: 1px solid var(--primary-stroke-color);
+    border-right: 1px solid var(--primary-stroke-color);
+    border-bottom: 1px solid var(--primary-stroke-color);
+}
+
+m-switch {
+    padding-bottom: var(--padding-controls);
+
+    --slider-color: var(--primary-foreground-color);
+    --background-color: var(--primary-background-color);
+    --checked-slider-color: var(--primary-background-color);
+    --checked-background-color: var(--accent-color);
+    --checked-background-hover-color: var(--accent-hover-color);
+    --stroke-color: var(--primary-stroke-color);
+    --stroke-hover-color: var(--primary-stroke-hover-color);
+}
+
+m-overlay {
+    --overlay-opacity: 0.4;
+}
+
+m-spinner {
+    --spinner-color: var(--accent-color);
+}
+
+m-overlay m-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+m-linked-ranges {
+    padding-bottom: var(--padding-controls);
+}
+
+m-tabs {
+    --foreground-color: var(--primary-foreground-color);
+    --background-color: var(--primary-background-color);
+    --stroke-color: var(--primary-stroke-color);
+
+    --tab-hover-color: var(--primary-foreground-hover-color);
+    --tab-hover-bg-color: var(--primary-fill-color);
+    --tab-selected-color: var(--accent-foreground-color);
+    --tab-selected-bg-color: var(--primary-background-color);
+    --tab-selected-secondary-color: var(--accent-color);
+    --tab-selected-hover-color: var(--accent-foreground-hover-color);
+    --tab-selected-hover-bg-color: var(--primary-fill-color);
+    --tab-selected-hover-secondary-color: var(--accent-stroke-hover-color);
+}
+
+m-tabs m-tab,
+m-tabs m-panel {
+    padding: var(--padding-controls);
+}
+
+input[type="button"] {
+    min-width: 120px;
+    margin: 4px 2px;
+    padding: 10px;
+
+    border: 1px solid var(--primary-stroke-color);
+    border-radius: 5px;
+    text-decoration: none;
+
+    color: var(--primary-foreground-color);
+    background-color: var(--primary-fill-color);
+}
+
+input[type="button"]:hover {
+    color: var(--primary-foreground-hover-color);
+    background-color: var(--primary-fill-hover-color);
+}
+
+input[type="button"]:active {
+    color: var(--primary-foreground-active-color);
+    background-color: var(--primary-fill-active-color);
+}

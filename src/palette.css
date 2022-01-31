@@ -1,0 +1,24 @@
+/** WARNING: This is an auto-generated file. */
+:root {
+  --primary-color: #757575;
+  --accent-color: #0f8f78;
+  --primary-background-color: #fcfcfc;
+  --primary-fill-color: #e8e8e8;
+  --primary-fill-hover-color: #dbdbdb;
+  --primary-fill-active-color: #f4f4f4;
+  --primary-stroke-color: #a8a8a8;
+  --primary-stroke-hover-color: #8f8f8f;
+  --primary-stroke-active-color: #c2c2c2;
+  --primary-foreground-color: #292929;
+  --primary-foreground-hover-color: #0f0f0f;
+  --primary-foreground-active-color: #424242;
+  --accent-hover-color: #0a6151;
+  --accent-active-color: #14bd9f;
+  --accent-stroke-hover-color: #0a6151;
+  --accent-stroke-active-color: #14bd9f;
+  --accent-foreground-color: #000504;
+  --accent-foreground-hover-color: #000000;
+  --accent-foreground-active-color: #05332b;
+  --solve-color: #19e619;
+  --fail-color: #e61919;
+}

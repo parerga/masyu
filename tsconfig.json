@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es2017",
+    "strict": true,
+    "sourceMap": false,
+    "declaration": false,
+    "outDir": "dist",
+    "allowJs": true,
+    "checkJs": false
+  },
+  "files": [
+    "src/app.ts",
+    "components/index.ts"
+  ],
+  "include": [
+    "src/global.d.ts",
+    "src/workers/*.js",
+    "components/**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "test"
+  ]
+}

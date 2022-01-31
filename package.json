@@ -1,0 +1,22 @@
+{
+  "name": "masyu",
+  "version": "1.0.0",
+  "description": "Application for creating, editing and solving Masyu puzzle.",
+  "author": "Parerga (https://github.com/parerga/masyu)",
+  "scripts": {
+    "build": "tsc && node node/copy-files",
+    "start": "node node/server && open http://localhost:4273"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  },
+  "copy": {
+    "destDir": "dist/",
+    "srcDir": "src/",
+    "files": [
+      "index.html",
+      "index.css",
+      "palette.css"
+    ]
+  }
+}
